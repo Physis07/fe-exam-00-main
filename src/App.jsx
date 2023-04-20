@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Formulario from "./components/Formulario";
-import  {Tasks}  from "./components/tareas/Tasks";
+import { Tasks } from "./components/tareas/Tasks";
+import { DataTime } from "./components/datatime/Datatime";
+import { Saludo } from "./components/datatime/Saludo";
 
 function App() {
   const [tarea, setTarea] = useState(" ");
@@ -48,6 +50,8 @@ function App() {
       <div className="nav">
         <p className="bar">ToDo App</p>
       </div>
+      <Saludo />
+
       <div className="contenido">
         <h2>ToDo List</h2>
         <Formulario
@@ -56,7 +60,12 @@ function App() {
           handleSubmit={handleSubmit}
         />
       </div>
-     <Tasks   tareas={listadoTask} onActualizar={onActualizar} borrarTarea={borrarTarea}  />
+      <Tasks
+        tareas={listadoTask}
+        onActualizar={onActualizar}
+        borrarTarea={borrarTarea}
+      />
+      <DataTime />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 import "./tarea.css";
 
 export function Task(props) {
@@ -27,8 +28,8 @@ export function Task(props) {
     return (
       <>
         <input type="text" onChange={handleChange} value={valor} />
-        <button className="refresh" onClick={handleClick}>
-          Guardar
+        <button className="refresh" id="save-task" onClick={handleClick}>
+          <FontAwesomeIcon icon={faFloppyDisk} />
         </button>
         <button onClick={() => borrarTarea(tarea.id)}>
           <FontAwesomeIcon icon={faTrashAlt} />
@@ -40,10 +41,12 @@ export function Task(props) {
   function EdicionDesactiv() {
     return (
       <div className="tareas-container">
-        <div><p>{tarea.tarea}</p></div>
+        <div>
+          <p>{tarea.tarea}</p>
+        </div>
         <div className="action-container">
           <button className="refresh" onClick={() => setEdit(true)}>
-          <FontAwesomeIcon icon={faPenToSquare} />
+            <FontAwesomeIcon icon={faPenToSquare} />
           </button>
           <button className="btn-delete" onClick={() => borrarTarea(tarea.id)}>
             <FontAwesomeIcon icon={faTrashAlt} />

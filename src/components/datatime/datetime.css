@@ -1,0 +1,9 @@
+.datetime {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgb(24, 7, 209);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
