@@ -4,6 +4,8 @@ import { Tasks } from "./components/tareas/Tasks";
 import { DataTime } from "./components/datatime/Datatime";
 import { Saludo } from "./components/datatime/Saludo";
 
+import Clima from "./components/clima/Clima";
+
 function App() {
   const [tarea, setTarea] = useState(" ");
   const [listadoTask, setListadoTask] = useState([]);
@@ -66,6 +68,7 @@ function App() {
         borrarTarea={borrarTarea}
       />
       <DataTime />
+      <Clima />
     </div>
   );
 }

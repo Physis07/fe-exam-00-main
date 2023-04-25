@@ -1,0 +1,29 @@
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.btn-weather {
+  height: 22.5px;
+  width: 70px;
+  border-radius: 3px;
+  color: blue;
+}
+
+.btn-weather:hover {
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 8px 8px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+.temp {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
